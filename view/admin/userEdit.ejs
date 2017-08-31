@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<form action="/user/editCon/<%=info[0].id%>" method="get">
+    <div class="form-group">
+        <label for="exampleInputEmail1">用户名</label>
+        <input type="text" class="form-control" id="" placeholder="user" name="user" value="<%=info[0].user%>">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">密码</label>
+        <input type="password" class="form-control" id="" placeholder="Password" name="pass" value="<%=info[0].pass%>">
+    </div>
+    <button type="submit" class="btn btn-default">修改</button>
+</form>
+</body>
+</html>

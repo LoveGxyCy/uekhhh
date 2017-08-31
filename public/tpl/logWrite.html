@@ -1,0 +1,52 @@
+<div>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" ng-click="back()"></a>
+        <h2 class="mui-title" style="font-size:17px;">
+            写日志
+        </h2>
+    </header>
+
+    <div class="mui-content" ng-show="showFlag">
+
+        <div class="mui-input-row">
+            <label>未完成</label>
+            <input type="text" class="mui-input-password" placeholder="已完成" ng-model="undone">
+        </div>
+        <div class="mui-input-row">
+            <label>已完成</label>
+            <input type="text" class="mui-input-password" placeholder="已完成" ng-model="done">
+        </div>
+
+        <div class="mui-input-row">
+            <label>已计划</label>
+            <input type="text" class="mui-input-password" placeholder="已计划" ng-model="doing">
+        </div>
+
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary" ng-click="changeShow()">选择发送对象</button>
+        </div>
+        <div>
+            {{acctname}}
+            <input type="hidden" ng-model="acctid">
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary" ng-click="submit()">确认</button>
+            <button type="button" class="mui-btn mui-btn-danger" ng-click="reset()">取消</button>
+        </div>
+    </div>
+
+    <div class="mui-content" id="selectMember" ng-show="!showFlag">
+        <div id="list" class="mui-indexed-list" style="margin-bottom: 100px">
+            <div class="mui-indexed-list-inner">
+                <ul class="mui-table-view" ng-repeat="obj in data">
+                    <li data-group="A" class="mui-table-view-divider mui-indexed-list-group"
+                        ng-bind-html="obj.parent"></li>
+                    <li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item"
+                        ng-repeat="item in obj.son" ng-bind-html="item.name" ng-click="add($event,item.id,item.name)"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="mui-btn mui-btn-block mui-btn-primary" ng-click="changeShow()">确定</div>
+    </div>
+</div>

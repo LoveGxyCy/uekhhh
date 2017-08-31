@@ -1,0 +1,71 @@
+<style>
+    .mui-content{
+        padding: 10px;
+        overflow-x: hidden;
+    }
+    img{
+        width: 100%;
+        height: 300px;
+    }
+    img[src*=_w16_h16]{
+        width: 16px;
+        height: 16px;
+    }
+    .view-animate-container {
+        position:relative;
+        background:white;
+        overflow:hidden;
+    }
+
+    .view-animate {
+        position:absolute;
+    }
+
+    .view-animate.ng-enter, .view-animate.ng-leave {
+        transition:left linear 1s;
+
+        display:block;
+        width:100%;
+
+    }
+
+    .view-animate.ng-enter {
+        left:100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+        left:0;
+    }
+    .view-animate.ng-leave.ng-leave-active {
+        left:-100%;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-icon mui-icon-back mui-icon-left-nav mui-pull-left" ng-click="back()"></a>
+    <h1 class="mui-title">Work App</h1>
+    <a class="mui-icon mui-icon-bars mui-icon-left-nav mui-pull-right"></a>
+</header>
+<div class="mui-content view-animate-container" style="margin-top: 20px" ng-bind-html="content.con">
+
+</div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active" href="#!/" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="#!/member" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-tab-label">同事信息</span>
+    </a>
+    <a class="mui-tab-item" href="#!/todo" ng-click="jump($event)">
+        <span class="mui-icon mui-icon mui-icon-compose"></span>
+        <span class="mui-tab-label">todo</span>
+    </a>
+    <a class="mui-tab-item" href="#!/" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-chatboxes"></span>
+        <span class="mui-tab-label">日报</span>
+    </a>
+    <a class="mui-tab-item" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>

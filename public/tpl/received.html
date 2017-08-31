@@ -1,0 +1,28 @@
+<style>
+    .none{
+        position: absolute;
+        margin-top: 50%;
+        color: #3c3c3c;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">我收到的</h1>
+</header>
+<div class="mui-content">
+    <div class="mui-title none" ng-if="data.length==0">未收到内容</div>
+    <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+        <li class="mui-table-view-cell" ng-repeat="item in data">
+            <div class="mui-table">
+                <div class="mui-table-cell mui-col-xs-10">
+                    <h4 class="mui-ellipsis">日报{{$index+1}}</h4>
+                    <h5 ng-bind-html="item.sendname"></h5>
+                    <p class="mui-h6 mui-ellipsis" ng-bind-html="item.done"></p>
+                </div>
+                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+                    <span class="mui-h5" ng-bind-html="item.time.toString().substr(5,5)"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

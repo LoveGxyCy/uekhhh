@@ -1,0 +1,45 @@
+<style>
+    body{
+        background-image: url("/img/back.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    form {
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 15px #affff3;
+        padding: 10px;
+    }
+
+    form h3 {
+        color: #fff;
+        text-align: center;
+    }
+
+    form label{
+        color: #fff;
+    }
+    div {
+        position: relative;
+    }
+</style>
+<form>
+    <h3>欢迎登陆</h3>
+    <div class="form-group">
+        <label for="exampleInputEmail1">用户名</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" ng-model="name" style="background: rgba(255,255,255,0.8)">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">密码</label>
+        <input type="password" class="form-control" placeholder="password" ng-model="pass" style="background: rgba(255,255,255,0.8)">
+    </div>
+    <button type="submit" class="btn btn-default" style="background: rgb(10,119,173);border: none;float: right;color: #fff;" ng-click="login()">登陆</button>
+</form>

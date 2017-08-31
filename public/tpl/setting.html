@@ -1,0 +1,32 @@
+<style>
+    .head{
+        width: 20vh;
+        height: 20vh;
+        background: #000000;
+        margin: 20px auto;
+        border-radius: 50%;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("/img/banner1.jpg");
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left" ng-click="back()"></a>
+    <h1 class="mui-title">设置</h1>
+</header>
+<div class="mui-content">
+    <a class="head" href="javascript:;"></a>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="#!/setting/editPass">
+                <span class="mui-icon iconfont  icon-buchongiconsvg06"></span>
+                修改密码
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="mui-btn mui-btn-block mui-btn-danger" style="margin-top: 200px" ng-click="logout()">退出登录</div>
+</div>

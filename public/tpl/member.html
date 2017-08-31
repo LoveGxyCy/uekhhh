@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_382691_bt7an2o77thdunmi.css">
+<style>
+    @font-face {
+        font-family: 'iconfont';  /* project id 382691 */
+        src: url('//at.alicdn.com/t/font_382691_bt7an2o77thdunmi.eot');
+        src: url('//at.alicdn.com/t/font_382691_bt7an2o77thdunmi.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_382691_bt7an2o77thdunmi.woff') format('woff'),
+        url('//at.alicdn.com/t/font_382691_bt7an2o77thdunmi.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_382691_bt7an2o77thdunmi.svg#iconfont') format('svg');
+    }
+    .view-animate {
+        width:100%;
+        transition:top .3s ease;
+        position: absolute;
+    }
+    .view-animate.ng-enter, .view-animate.ng-leave {
+
+        display:block;
+
+        top:0;
+    }
+
+    .view-animate.ng-enter {
+        top:100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+        top:0;
+    }
+    .view-animate.ng-leave.ng-leave-active {
+        top:-100%;
+    }
+
+    img{
+        width:100%;
+    }
+
+    .mui-content{
+        overflow-x: hidden;
+        padding:10px;
+    }
+
+    img[src*=w16_h16]{
+        width:16px;
+    }
+
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left" ng-click="back()"></a>
+    <h1 class="mui-title">员工信息</h1>
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-collapse" ng-repeat="item in data track by $index">
+            <span class="iconfont mui-pull-left">&#xe60a;</span>
+            <a class="mui-navigate-right" href="javascript:;">
+                {{item.parent}}
+            </a>
+            <div class="son">
+                <div class="mui-collapse-content" ng-repeat="son in item.son track by son.id">
+                    <p style="margin-left: 15px">
+                        <span class="iconfont mui-pull-left" style="font-size: 24px;color: #333">&#xe6fd;</span>
+                        <a href="#!/member/{{son.id}}" style="margin-left: 8px">{{son.name}}</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<nav class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" href="#!/" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item mui-active" href="#!/member" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-tab-label">同事信息</span>
+    </a>
+    <a class="mui-tab-item" href="#!/todo" ng-click="jump($event)">
+        <span class="mui-icon mui-icon mui-icon-compose"></span>
+        <span class="mui-tab-label">todo</span>
+    </a>
+    <a class="mui-tab-item" href="#!/log" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-chatboxes"></span>
+        <span class="mui-tab-label">日报</span>
+    </a>
+    <a class="mui-tab-item" href="#!/setting" ng-click="jump($event)">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>

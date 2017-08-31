@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/route.js"></script>
+
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            color: white;
+            box-sizing: border-box;
+            height:100%;overflow: hidden;
+        }
+        ul li{
+            list-style: none;
+        }
+        .jumbotron a{
+            color: white;
+        }
+        .jumbotron{
+            height:10%;
+            background: #0f0f0f;
+        }
+        .jumbotron h3{
+            line-height: 1;
+            float: left;
+        }
+        .container-fluid{
+            height:90%;
+        }
+        .row,.left,.right{
+            height:100%;
+        }
+
+        .left{
+            width: 17%;
+            float: left;
+            border-right:1px solid #000;
+            overflow-y: auto;
+            background: #8c8c8c;
+        }
+        .opts{
+            margin: 10px 0;
+        }
+        .opts>a{
+            width: 150px;
+            height: 35px;
+            display: inline-block;
+            background-color: #ccc;
+            text-decoration: none;
+            text-align: center;
+            line-height:35px;
+            color: #0f0f0f;
+        }
+        .son li{
+            margin: 10px 0;
+            padding: 0;
+        }
+        .son{
+            margin:0;
+            padding:0;
+            display: none;
+        }
+        .son li a{
+            width: 150px;
+            height: 35px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            line-height:35px;
+            color: #0f0f0f;
+        }
+        .son li a:hover{
+            background: #000;
+            color: #fff;
+        }
+        .right{
+            width: 83%;
+            float: right;
+            padding: 20px;
+        }
+        iframe{
+            width:100%;height:100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(".opts>a").click(function () {
+                $(this).nextAll("ul").toggle();
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div class="jumbotron" style="margin:0;padding: 0">
+    <h3 class="text-center">Welcome WorkManager</h3>
+    <a href="/login/logout" style="float: right;margin-right: 50px;line-height: 74px;font-size: 20px">退出</a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="left">
+            <ul>
+                <li class="opts">
+                    <a href="javascript:;">管理员</a>
+                    <ul class="son">
+                        <li>
+                            <a href="/user/add" target="main">添加管理员</a>
+                        </li>
+                        <li>
+                            <a href="/user/show"target="main">查看管理员</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="opts">
+                    <a href="javascript:;">员工管理</a>
+                    <ul class="son">
+                        <li>
+                            <a href="/member/add" target="main">添加新员工</a>
+                        </li>
+                        <li>
+                            <a href="/member/show"target="main">管理员工</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="opts">
+                    <a href="javascript:;">部门管理</a>
+                    <ul class="son">
+                        <li>
+                            <a href="/bumen/add" target="main">添加部门</a>
+                        </li>
+                        <li>
+                            <a href="/bumen/show"target="main">管理部门</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="opts">
+                    <a href="javascript:;">新闻管理</a>
+                    <ul class="son">
+
+                        <li>
+                            <a href="/news/addCat" target="main">添加分类</a>
+                        </li>
+                        <li>
+                            <a href="/news/showCat" target="main">管理分类</a>
+                        </li>
+                        <li>
+                            <a href="/news/addNews" target="main">添加新闻</a>
+                        </li>
+                        <li>
+                            <a href="/news/showNews"target="main">查看新闻</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="right">
+            <iframe src="" frameborder="0" name="main"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

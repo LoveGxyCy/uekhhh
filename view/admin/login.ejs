@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        form {
+            width: 300px;
+            height: 300px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 15px #affff3;
+            padding: 10px;
+        }
+
+        form h3 {
+            text-align: center;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        div {
+            position: relative;
+        }
+        .logo{
+            width: 385px;
+            margin: 0 auto;
+            height: 375px;
+            margin-top: 98px;
+        }
+    </style>
+</head>
+<body style="background: url('/img/login_bgx.gif');color: #29bcff;">
+<div class="logo">
+    <h1>Welcome WorkManager</h1>
+</div>
+<form action="/login/check" method="post">
+    <h3>欢迎登陆</h3>
+    <div class="form-group">
+        <label for="exampleInputEmail1">用户名</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="user">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">密码</label>
+        <input type="password" class="form-control" placeholder="password" name="pass">
+    </div>
+    <button type="submit" class="btn btn-default" style="float: right;color: #29bcff;">登陆</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        tr,th,td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-hover">
+    <tr>
+        <th>id</th>
+        <th>员工姓名</th>
+        <th>员工编号</th>
+        <th>员工性别</th>
+        <th>联系方式</th>
+        <th>邮箱</th>
+        <th>QQ</th>
+        <th>所属部门</th>
+        <th>职务</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    <%for(var i=0;i<info.length;i++){%>
+    <tr>
+        <td><%=info[i].id%></td>
+        <td><%=info[i].name%></td>
+        <td><%=info[i].numbers%></td>
+        <td><%=(info[i].sex==1)?"男":"女"%></td>
+        <td><%=info[i].phone%></td>
+        <td><%=info[i].email%></td>
+        <td><%=info[i].qq%></td>
+        <td><%=info[i].bumenid%></td>
+        <td><%=info[i].zhiwu%></td>
+        <td><%=info[i].state%></td>
+        <td>
+            <a href="/member/del/<%=info[i].id%>" class="btn btn-danger">删除</a>
+            <a href="/member/edit/<%=info[i].id%>" class="btn btn-info">修改</a>
+        </td>
+    </tr>
+    <%}%>
+</table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/mui.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_45574xp71rgj5rk9.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/route.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/angular-sanitize.min.js"></script>
+    <script src="/js/mui.min.js"></script>
+    <script src="/js/service.js"></script>
+    <script src="/js/iscroll.js"></script>
+
+    <style>
+        .mui-bar-nav{
+            background: #0f0f0f;
+        }
+        .mui-bar .mui-title{
+            color: #fff;
+        }
+        .mui-bar-nav.mui-bar .mui-icon{
+            color: #509bf8;
+        }
+        .mui-content{
+            margin-bottom: 50px;
+        }
+        .mui-bar-tab{
+            background: #0f0f0f;
+        }
+        .mui-bar-tab .mui-tab-item .mui-icon{
+            color: #509bf8;
+        }
+        .mui-bar-tab .mui-tab-item .mui-icon~.mui-tab-label{
+            color: #509bf8;
+        }
+        .mui-bar-tab .mui-tab-item.mui-active {
+            background: #e6fffa;
+        }
+    </style>
+
+</head>
+<body ng-app="myapp">
+    <div ng-view class="view-animate">
+
+    </div>
+</body>
+</html>
+<!--
+<script>
+    mui('body').on('tap','a',function () {
+        document.location.href=this.href;
+    });
+</script>-->

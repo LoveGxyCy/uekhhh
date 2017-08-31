@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        tr,th,td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-hover">
+    <tr>
+        <th>id</th>
+        <th>新闻标题</th>
+        <th>新闻内容</th>
+        <th>cid</th>
+        <th>操作</th>
+    </tr>
+    <%for(var i=0;i<info.length;i++){%>
+    <tr>
+        <td><%=info[i].id%></td>
+        <td><%=info[i].title%></td>
+        <td><%=info[i].con%></td>
+        <td><%=info[i].cid%></td>
+        <td>
+            <a href="/news/delNews/<%=info[i].id%>" class="btn btn-danger">删除</a>
+            <a type="/news/edit" class="btn btn-info">修改</a>
+        </td>
+    </tr>
+    <%}%>
+</table>
+</body>
+</html>
